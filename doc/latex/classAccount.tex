@@ -1,0 +1,68 @@
+\hypertarget{classAccount}{}\section{Account Class Reference}
+\label{classAccount}\index{Account@{Account}}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classAccount_a3869a254c393605babed6f3027fc4b79}\label{classAccount_a3869a254c393605babed6f3027fc4b79}} 
+{\bfseries Account} (std\+::string \+\_\+agency, std\+::string \+\_\+number, Type\+Account \+\_\+type\+\_\+account, std\+::string \+\_\+password)
+\item 
+\mbox{\Hypertarget{classAccount_a82632554b95fe252b4f245739bac8d27}\label{classAccount_a82632554b95fe252b4f245739bac8d27}} 
+void {\bfseries set\+Limit} (float \+\_\+limit)
+\item 
+\mbox{\Hypertarget{classAccount_a1f341640de88d628019530b70b1b9431}\label{classAccount_a1f341640de88d628019530b70b1b9431}} 
+void {\bfseries set\+Balance} (float \+\_\+balance)
+\item 
+\mbox{\Hypertarget{classAccount_a48071ecda1ec46aebce5f8379d346528}\label{classAccount_a48071ecda1ec46aebce5f8379d346528}} 
+void {\bfseries add\+Operation} (\hyperlink{classOperation}{Operation} $\ast$\+\_\+operations)
+\item 
+\mbox{\Hypertarget{classAccount_a732975b513ba454378ca1c91942b23ba}\label{classAccount_a732975b513ba454378ca1c91942b23ba}} 
+std\+::vector$<$ \hyperlink{classOperation}{Operation} $\ast$ $>$\+::iterator {\bfseries operations\+B\+E\+G\+IN} ()
+\item 
+\mbox{\Hypertarget{classAccount_a3f499b3a04b88756d0a2542898155218}\label{classAccount_a3f499b3a04b88756d0a2542898155218}} 
+std\+::vector$<$ \hyperlink{classOperation}{Operation} $\ast$ $>$\+::iterator {\bfseries operations\+E\+ND} ()
+\item 
+\mbox{\Hypertarget{classAccount_a6da81204de964b2097469ee5ff904603}\label{classAccount_a6da81204de964b2097469ee5ff904603}} 
+std\+::string {\bfseries get\+Agency} ()
+\item 
+\mbox{\Hypertarget{classAccount_a829e1a323877c6d99cfa327f4515a2c4}\label{classAccount_a829e1a323877c6d99cfa327f4515a2c4}} 
+std\+::string {\bfseries get\+Number} ()
+\item 
+\mbox{\Hypertarget{classAccount_aa810a2202edd55c76649fb66d3348416}\label{classAccount_aa810a2202edd55c76649fb66d3348416}} 
+std\+::string {\bfseries get\+Password} ()
+\item 
+\mbox{\Hypertarget{classAccount_a579bd8d93fa3bcbf78dc9cba275eb269}\label{classAccount_a579bd8d93fa3bcbf78dc9cba275eb269}} 
+float {\bfseries get\+Limit} ()
+\item 
+\mbox{\Hypertarget{classAccount_a70d66b5495190c8eacff6ff08eee36df}\label{classAccount_a70d66b5495190c8eacff6ff08eee36df}} 
+Type\+Account {\bfseries get\+Type\+\_\+account} ()
+\item 
+\mbox{\Hypertarget{classAccount_a6a55c17b886dce3a59b18bb746ba4301}\label{classAccount_a6a55c17b886dce3a59b18bb746ba4301}} 
+float {\bfseries get\+Balance} ()
+\item 
+\mbox{\Hypertarget{classAccount_ac285f3e2c3e893cbece0c100cbe49659}\label{classAccount_ac285f3e2c3e893cbece0c100cbe49659}} 
+bool {\bfseries operator==} (\hyperlink{classAccount}{Account} \&acc)
+\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classAccount_ab709beb9e2fc1233aacb62ffcbcd2144}\label{classAccount_ab709beb9e2fc1233aacb62ffcbcd2144}} 
+static int {\bfseries get\+Total\+Accounts} ()
+\end{DoxyCompactItemize}
+\subsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classAccount_a302696062a8878a4bd013249dd5bc823}\label{classAccount_a302696062a8878a4bd013249dd5bc823}} 
+static int {\bfseries Total\+Accounts} = 0
+\end{DoxyCompactItemize}
+\subsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classAccount_ad6ea1ae381a91af7074fbfab1374cd03}\label{classAccount_ad6ea1ae381a91af7074fbfab1374cd03}} 
+std\+::ostream \& {\bfseries operator$<$$<$} (std\+::ostream \&o, \hyperlink{classAccount}{Account} \&acc)
+\end{DoxyCompactItemize}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/xsolowingx/\+L\+P1/\+Programas/\+Lista\+Ex/include/questao2/\hyperlink{account_8h}{account.\+h}\item 
+/home/xsolowingx/\+L\+P1/\+Programas/\+Lista\+Ex/src/questao2/\hyperlink{account_8cpp}{account.\+cpp}\end{DoxyCompactItemize}

@@ -1,6 +1,15 @@
+/**
+ *@since 10/10/2017
+ *@file fruta.cpp
+ *@brief arquivo onde contém as implementações da classe Fruta.
+ *@author Matheus de Jesus Leandro de Medeiros
+ *@date 13/10/2017
+ */
 #include <iomanip>
 #include "fruta.h"
 #include "produto.h"
+
+/*=====Construtores=====*/
 
 Fruta::Fruta() {}
 
@@ -8,17 +17,23 @@ Fruta::Fruta(std::string _codigo, std::string _descricao, double _preco,
 	std::string _data, double _validade):
 	Produto(_codigo, _descricao, _preco), m_data_lote(_data), m_validade(_validade) {}
 
+/*=====Destrutor=====*/
+
 Fruta::~Fruta() {}
 
-std::string Fruta::getDataLote()
+/*=====Getters=====*/
+
+std::string Fruta::getDataLote() const
 {
 	return this->m_data_lote;
 }
 
-double Fruta::getValidade()
+double Fruta::getValidade() const
 {
 	return this->m_validade;
 }
+
+/*=====Setters=====*/
 
 void Fruta::setDataLote(std::string _data)
 {
@@ -30,12 +45,14 @@ void Fruta::setValidade(double _validade)
 	this->m_validade = _validade;
 }
 
-std::ostream& Fruta::print(std::ostream &o)
+/*=====Membro que imprime as informações da classe=====*/
+
+std::ostream& Fruta::print(std::ostream &o) const
 {
-	o << std::setfill (' ') << std::setw (10) << this->m_cod_barras << " | " 
-		<< std::setfill ('.') << std::setw (20) << this->m_descricao << " | " 
-		<< std::setfill (' ') << std::setw (5) << this->m_preco << " | "
-		<< std::setfill (' ') << std::setw (10) << this->m_data_lote << " | " 
-		<< std::setfill (' ') << std::setw (3) << this->m_validade;
-		return o;
+	o << "| " << this->m_cod_barras << " | " 
+	  << this->m_descricao << " | "
+	  << this->m_preco << " | "
+	  << this->m_data_lote << " | " 
+	  << this->m_validade << " Dias |";
+	return o;
 }
