@@ -3,17 +3,11 @@
 
 #include "conta.h"
 
-typedef enum str_especial
-{
-	Especial,
-	Normal
-}TipoConta;
-
 class ContaCorrente : public Conta
 {
 private:
 	TipoConta tipo_da_conta;
-	float limit;
+	float limite;
 public:
 	ContaCorrente();
 	ContaCorrente(std::string _agencia,std::string _numero_conta,std::string _senha,
@@ -22,10 +16,16 @@ public:
 	
 	/*=====Getters=====*/
 	TipoConta getTipoConta() const;
-	float getLimit() const;
+	float getLimite() const ;
 
+	int getLimiteSaque() const = 0;
+	int getLimiteExtrato() const = 0;
+	int getLimiteTransferenciaTitular() const = 0;
+	void setTodosLimitesCP(int LA) const = 0;
+	void diminuiLimite(std::string tipo) const = 0;
+	
 private:
-	std::ostream& print(std::ostream &o);
+	std::ostream& print(std::ostream &o) const;
 	
 };
 

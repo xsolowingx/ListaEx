@@ -14,6 +14,14 @@
 #include <memory>
 #include "operacao.h"
 
+typedef enum str_especial
+{
+	Especial,
+	Normal,
+	Poupanca
+}TipoConta;
+
+
 class Conta
 {
 protected:
@@ -31,18 +39,30 @@ public:
 	Conta();
 	virtual ~Conta();
 
-	void addOperacoes(std::shared_ptr<Operacao> _operacao);
+	void addOperacao(std::shared_ptr<Operacao> _operacao);
 
 	/*=====Membros que retornam o iterador para operações=====*/
 	std::vector<std::shared_ptr<Operacao>>::iterator operacoesBEGIN();
 	std::vector<std::shared_ptr<Operacao>>::iterator operacoesEND();
+
+	/*=====Setters=====*/
+	void setSaldo(float _saldo_);
 
 	/*=====Getters=====*/
 	std::string getAgencia() const;
 	std::string getNumeroConta() const;
 	std::string getSenha() const;
 	std::string getTitular() const;
+	std::string getTipoC() const;
 	float getSaldo() const;
+	virtual TipoConta getTipoConta() const = 0;
+	virtual float getLimite() const = 0;
+	
+	virtual int getLimiteSaque() const = 0;
+	virtual int getLimiteExtrato() const = 0;
+	virtual int getLimiteTransferenciaTitular() const = 0;
+	virtual void setTodosLimitesCP(int LA) const = 0;
+	virtual void diminuiLimite(std::string tipo) const = 0;
 
 	friend std::ostream& operator<< (std::ostream &o,Conta const &c);
 	bool operator==(Conta &c) const;

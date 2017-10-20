@@ -5,8 +5,8 @@
 #include "contaCorrente.h"
 #include "contaPoupanca.h"
 
-void criarContaCorrente(std::vector<std::shared_ptr<Conta>> &contas);
-void criarContaPoupanca(std::vector<std::shared_ptr<Conta>> &contas);
+void criarConta(std::vector<std::shared_ptr<Conta>> &contas);
+
 void deposito(std::vector<std::shared_ptr<Conta>> &contas);
 void saque(std::vector<std::shared_ptr<Conta>> &contas);
 void deletarConta(std::vector<std::shared_ptr<Conta>> &contas);

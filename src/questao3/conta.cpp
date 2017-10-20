@@ -33,9 +33,15 @@ std::vector<std::shared_ptr<Operacao>>::iterator Conta::operacoesEND()
 
 /*=====Adiciona uma operação à conta=====*/
 
-void Conta::addOperacoes(std::shared_ptr<Operacao> _operacao)
+void Conta::addOperacao(std::shared_ptr<Operacao> _operacao)
 {
 	this->operacoes.push_back(_operacao);
+}
+
+/*=====Setters=====*/
+void Conta::setSaldo(float _saldo_)
+{
+	this->saldo = _saldo_;
 }
 
 /*=====Getters=====*/
@@ -64,6 +70,8 @@ float Conta::getSaldo() const
 {
 	return this->saldo;
 }
+
+/*=====Sobrecarga de operadores=====*/
 
 std::ostream& operator<< (std::ostream &o,Conta const &c)
 {

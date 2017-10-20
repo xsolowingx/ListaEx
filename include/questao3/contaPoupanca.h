@@ -6,27 +6,28 @@
 class ContaPoupanca :public Conta
 {
 private:
-	int limiteSaldo;
+	int limiteSaque;
 	int limiteExtrato;
 	int limiteTransferenciaTitular;
+	TipoConta tipo_da_conta;
 public:
 	ContaPoupanca();
-	ContaPoupanca(std::string _agencia,std::string _numero_conta,std::string _senha,std::string _titular);
+	ContaPoupanca(std::string _agencia,std::string _numero_conta,std::string _senha,std::string _titular,TipoConta _tipo_da_conta);
 		
 	~ContaPoupanca();
 	
 	/*=====Setters=====*/
-	void setLimiteSaldo(int LS);
-	void setLimiteExtrato(int LE);
-	void setLimiteTransferenciaTitular(int LTT);
+	void setTodosLimitesCP(int LA);
+	void diminuiLimite(std::string tipo);
 
 	/*=====Getters=====*/
-	int getLimiteSaldo() const;
+	int getLimiteSaque() const;
 	int getLimiteExtrato() const;
 	int getLimiteTransferenciaTitular() const;
-
+	TipoConta getTipoConta() const;
+	float getLimite() const = 0;
 private:
-	std::ostream& print(std::ostream &o);
+	std::ostream& print(std::ostream &o) const;
 };
 
 
