@@ -11,8 +11,8 @@ int Conta::getTotalContas()
 
 Conta::Conta() {}
 
-Conta::Conta(std::string _agencia,std::string _numero_conta,std::string _senha,std::string _titular):
-	agencia(_agencia), numero_conta(_numero_conta), senha(_senha), titular(_titular), saldo(0.00)
+Conta::Conta(std::string _agencia,std::string _numero_conta,std::string _senha,std::string _titular,TipoConta _tipo_da_conta):
+	agencia(_agencia), numero_conta(_numero_conta), senha(_senha), titular(_titular),tipo_da_conta(_tipo_da_conta), saldo(0.00)
 	{
 		totalContas++;
 	}

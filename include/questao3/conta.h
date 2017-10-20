@@ -30,12 +30,13 @@ protected:
 	std::string senha;
 	std::string titular;
 	std::vector<std::shared_ptr<Operacao>> operacoes;
+	TipoConta tipo_da_conta;
 	float saldo;
 public:
 	static int totalContas;
 	static int getTotalContas();
 
-	Conta(std::string _agencia,std::string _numero_conta,std::string _senha,std::string _titular);
+	Conta(std::string _agencia,std::string _numero_conta,std::string _senha,std::string _titular,TipoConta _tipo_da_conta);
 	Conta();
 	virtual ~Conta();
 

@@ -4,7 +4,7 @@ ContaPoupanca::ContaPoupanca() {}
 
 ContaPoupanca::ContaPoupanca(std::string _agencia,std::string _numero_conta,std::string _senha,
 	std::string _titular,TipoConta _tipo_da_conta):
-	Conta(_agencia,_numero_conta,_senha,_titular),limiteSaque(3), limiteExtrato(3),
+	Conta(_agencia,_numero_conta,_senha,_titular,_tipo_da_conta),limiteSaque(3), limiteExtrato(3),
 	limiteTransferenciaTitular(3), tipo_da_conta(_tipo_da_conta) {}	
 
 ContaPoupanca::~ContaPoupanca() {}

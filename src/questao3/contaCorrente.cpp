@@ -5,7 +5,7 @@ ContaCorrente::ContaCorrente() {}
 
 ContaCorrente::ContaCorrente(std::string _agencia,std::string _numero_conta,std::string _senha,
 	std::string _titular,TipoConta _tipo_da_conta):
-	Conta(_agencia,_numero_conta,_senha,_titular), tipo_da_conta(_tipo_da_conta), limite(500.00) {}
+	Conta(_agencia,_numero_conta,_senha,_titular,_tipo_da_conta), tipo_da_conta(_tipo_da_conta), limite(500.00) {}
 
 ContaCorrente::~ContaCorrente() {}
 
@@ -27,13 +27,4 @@ std::ostream& ContaCorrente::print(std::ostream &o) const
 	  << "Tipo da conta: Corrente" << std::endl;
 	return o;
 }
-/*
-int ContaCorrente::getLimiteSaque() const {}
 
-int ContaCorrente::getLimiteExtrato() const {}
-
-int ContaCorrente::getLimiteTransferenciaTitular() const {}
-
-void ContaCorrente::setTodosLimitesCP(int LA) const  {}
-
-void ContaCorrente::diminuiLimite(std::string tipo) const {}*/
