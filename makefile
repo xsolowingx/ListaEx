@@ -84,9 +84,6 @@ questao3:	$(OBJETO3)
 	@echo "+++ [Executavel $@ criado em $(BIN_DIR)] +++"
 	@echo "=========*-*========="
 
-$(OBJ_DIR)/questao3/teste.o:	$(SRC_DIR)/questao3/teste.cpp
-	$(CC) $(CFLAGS) -c $< -o $@
-
 $(OBJ_DIR)/questao3/conta.o:	$(SRC_DIR)/questao3/conta.cpp
 	$(CC) $(CFLAGS) -c $< -o $@
 

@@ -81,7 +81,15 @@ void criarConta(std::vector<std::shared_ptr<Conta>> &contas)
 
 	std::getline(std::cin,_SENHA_);
 
-	contas.push_back(std::make_shared<ContaCorrente>(_agencia_,_numero_conta_,_SENHA_,_titular_,Tipo_Conta) );
+	if(Tipo_Conta == Poupanca)
+	{
+		contas.push_back(std::make_shared<ContaPoupanca>(_agencia_,_numero_conta_,_SENHA_,_titular_,Tipo_Conta) );
+	}
+
+	if(Tipo_Conta != Poupanca)
+	{
+		contas.push_back(std::make_shared<ContaCorrente>(_agencia_,_numero_conta_,_SENHA_,_titular_,Tipo_Conta) );
+	}
 }
 
 /*=====Faz um depósito e adiciona uma operação de "Credito" para a conta=====*/
