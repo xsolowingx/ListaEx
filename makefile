@@ -30,8 +30,6 @@ $(OBJ_DIR)/questao3/contaPoupanca.o $(OBJ_DIR)/questao3/main3.o
 #Garante que os alvos desta lista nao sejam confundidos com arquivos de mesmo nome
 .PHONY: all clean distclean doxy
 
-questao32: questao3
-
 all:	questao1 questao2 questao3
 
 questao1:	$(OBJETO1)
@@ -102,3 +100,4 @@ $(OBJ_DIR)/questao3/main3.o:	$(SRC_DIR)/questao3/main3.cpp
 
 $(OBJ_DIR)/questao3/banco.o:	$(SRC_DIR)/questao3/banco.cpp
 	$(CC) $(CFLAGS) -c $< -o $@
+

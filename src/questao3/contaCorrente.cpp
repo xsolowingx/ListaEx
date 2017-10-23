@@ -1,5 +1,14 @@
+/**
+ *@since 15/10/2017
+ *@file contaCorrente.cpp
+ *@brief arquivo onde contém as implementações da classe ContaCorrente.
+ *@author Matheus de Jesus Leandro de Medeiros
+ *@date 23/10/2017
+ */
 #include "contaCorrente.h"
 #include "conta.h"
+
+/*=====Construtores e destrutor=====*/
 
 ContaCorrente::ContaCorrente() {}
 
@@ -9,10 +18,7 @@ ContaCorrente::ContaCorrente(std::string _agencia,std::string _numero_conta,std:
 
 ContaCorrente::~ContaCorrente() {}
 
-float ContaCorrente::getLimite() const
-{
-	return this->limite;
-}
+/*=====Método que imprime os atributos da classe=====*/
 
 std::ostream& ContaCorrente::print(std::ostream &o) const
 {
@@ -23,11 +29,29 @@ std::ostream& ContaCorrente::print(std::ostream &o) const
 	return o;
 }
 
-int ContaCorrente::getLimiteSaque() const {}
+/*=====Getter=====*/
+
+float ContaCorrente::getLimite() const
+{
+	return this->limite;
+}
+
+/*====="Implementação padrão dos métodos...."=====*/
+
+int ContaCorrente::getLimiteSaque() const 
+{
+	return 1;
+}
 	
-int ContaCorrente::getLimiteExtrato() const {}
+int ContaCorrente::getLimiteExtrato() const
+{
+	return 1;
+}
 	
-int ContaCorrente::getLimiteTransferenciaTitular() const {}
+int ContaCorrente::getLimiteTransferenciaTitular() const 
+{
+	return 1;
+}
 
 void ContaCorrente::setTodosLimitesCPD(int &LA)
 {

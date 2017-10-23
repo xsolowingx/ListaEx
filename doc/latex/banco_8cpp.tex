@@ -1,0 +1,80 @@
+\hypertarget{banco_8cpp}{}\section{/home/xsolowingx/\+L\+P1/\+Programas/\+Lista\+Ex/src/questao3/banco.cpp File Reference}
+\label{banco_8cpp}\index{/home/xsolowingx/\+L\+P1/\+Programas/\+Lista\+Ex/src/questao3/banco.\+cpp@{/home/xsolowingx/\+L\+P1/\+Programas/\+Lista\+Ex/src/questao3/banco.\+cpp}}
+
+
+arquivo onde contém as implementações das funções do banco.  
+
+
+{\ttfamily \#include \char`\"{}banco.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}conta\+Corrente.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}conta\+Poupanca.\+h\char`\"{}}\newline
+{\ttfamily \#include $<$cstdlib$>$}\newline
+{\ttfamily \#include $<$iostream$>$}\newline
+{\ttfamily \#include $<$sstream$>$}\newline
+{\ttfamily \#include $<$iomanip$>$}\newline
+{\ttfamily \#include $<$memory$>$}\newline
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{banco_8cpp_aef9c58b5f7bea8101eaed6b2dea1a096}\label{banco_8cpp_aef9c58b5f7bea8101eaed6b2dea1a096}} 
+void {\bfseries criar\+Conta} (std\+::vector$<$ std\+::shared\+\_\+ptr$<$ \hyperlink{classConta}{Conta} $>$$>$ \&contas)
+\item 
+\mbox{\Hypertarget{banco_8cpp_a597eb5a16a25823e1f7c7f642dc47fd2}\label{banco_8cpp_a597eb5a16a25823e1f7c7f642dc47fd2}} 
+void {\bfseries deposito} (std\+::vector$<$ std\+::shared\+\_\+ptr$<$ \hyperlink{classConta}{Conta} $>$$>$ \&contas)
+\item 
+\mbox{\Hypertarget{banco_8cpp_a9cd5a8ec566ea871270cf65bedda319e}\label{banco_8cpp_a9cd5a8ec566ea871270cf65bedda319e}} 
+void {\bfseries saque} (std\+::vector$<$ std\+::shared\+\_\+ptr$<$ \hyperlink{classConta}{Conta} $>$$>$ \&contas)
+\item 
+\mbox{\Hypertarget{banco_8cpp_a2f050ea778a4f4c4c028ed59c2c28ca0}\label{banco_8cpp_a2f050ea778a4f4c4c028ed59c2c28ca0}} 
+void {\bfseries deletar\+Conta} (std\+::vector$<$ std\+::shared\+\_\+ptr$<$ \hyperlink{classConta}{Conta} $>$$>$ \&contas)
+\item 
+\mbox{\Hypertarget{banco_8cpp_a2ad81220e3c7b53ced55bfd76fb255b2}\label{banco_8cpp_a2ad81220e3c7b53ced55bfd76fb255b2}} 
+void {\bfseries listar\+Contas} (std\+::vector$<$ std\+::shared\+\_\+ptr$<$ \hyperlink{classConta}{Conta} $>$$>$ \&contas)
+\item 
+\mbox{\Hypertarget{banco_8cpp_a0cdf5cac1e3ebcd5da625327caec5282}\label{banco_8cpp_a0cdf5cac1e3ebcd5da625327caec5282}} 
+void {\bfseries transferencia} (std\+::vector$<$ std\+::shared\+\_\+ptr$<$ \hyperlink{classConta}{Conta} $>$$>$ \&contas)
+\item 
+\mbox{\Hypertarget{banco_8cpp_a7e814b976f0e940568e477eb3842af47}\label{banco_8cpp_a7e814b976f0e940568e477eb3842af47}} 
+void {\bfseries ve\+Saldo} (std\+::vector$<$ std\+::shared\+\_\+ptr$<$ \hyperlink{classConta}{Conta} $>$$>$ \&contas)
+\item 
+\mbox{\Hypertarget{banco_8cpp_a80b39cc6a7b4c560a17f6eb38c093731}\label{banco_8cpp_a80b39cc6a7b4c560a17f6eb38c093731}} 
+void {\bfseries extrato\+Bancario} (std\+::vector$<$ std\+::shared\+\_\+ptr$<$ \hyperlink{classConta}{Conta} $>$$>$ \&contas)
+\item 
+\mbox{\Hypertarget{banco_8cpp_a8013403a874bef279e02989ee41548e2}\label{banco_8cpp_a8013403a874bef279e02989ee41548e2}} 
+bool {\bfseries verifica\+Conta} (std\+::string \&\+\_\+agencia\+\_\+, std\+::string \&\+\_\+numero\+\_\+conta\+\_\+, std\+::vector$<$ std\+::shared\+\_\+ptr$<$ \hyperlink{classConta}{Conta} $>$$>$ \&contas)
+\item 
+\mbox{\Hypertarget{banco_8cpp_ac67e012e8ecfa66947183de841dd14ae}\label{banco_8cpp_ac67e012e8ecfa66947183de841dd14ae}} 
+bool {\bfseries verifica\+Sim\+\_\+\+Nao} ()
+\item 
+\mbox{\Hypertarget{banco_8cpp_aef1152c51b001637006df0ab72bbcf50}\label{banco_8cpp_aef1152c51b001637006df0ab72bbcf50}} 
+void {\bfseries verifica\+Senha} (\hyperlink{classConta}{Conta} \&contaP)
+\item 
+\mbox{\Hypertarget{banco_8cpp_ab6e19bd37241c2e16772a79d52bbb752}\label{banco_8cpp_ab6e19bd37241c2e16772a79d52bbb752}} 
+void {\bfseries input\+NumberI} (std\+::string \&numero)
+\item 
+\mbox{\Hypertarget{banco_8cpp_acae978be0a274c180dd48378e541861d}\label{banco_8cpp_acae978be0a274c180dd48378e541861d}} 
+void {\bfseries input\+NumberF} (std\+::string \&numero)
+\item 
+\mbox{\Hypertarget{banco_8cpp_a7c1c37c23cc36fb230564971c889692b}\label{banco_8cpp_a7c1c37c23cc36fb230564971c889692b}} 
+void {\bfseries input\+Name} (std\+::string \&name)
+\item 
+\mbox{\Hypertarget{banco_8cpp_ad2611953204db49693c98283ab6f0d80}\label{banco_8cpp_ad2611953204db49693c98283ab6f0d80}} 
+void {\bfseries mensagem\+Inicio} ()
+\item 
+\mbox{\Hypertarget{banco_8cpp_a2a0e843767aeea4f433a28b9c54f573a}\label{banco_8cpp_a2a0e843767aeea4f433a28b9c54f573a}} 
+void {\bfseries menu} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+arquivo onde contém as implementações das funções do banco. 
+
+\begin{DoxySince}{Since}
+15/10/2017
+\end{DoxySince}
+\begin{DoxyAuthor}{Author}
+Matheus de Jesus Leandro de Medeiros 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+23/10/2017 
+\end{DoxyDate}

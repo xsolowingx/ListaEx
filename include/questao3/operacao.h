@@ -1,3 +1,10 @@
+/**
+ *@since 15/10/2017
+ *@file operacao.h
+ *@brief arquivo onde contém as definições da classe Operacao.
+ *@author Matheus de Jesus Leandro de Medeiros
+ *@date 23/10/2017
+ */
 #ifndef _OPERACAO_H
 #define _OPERACAO_H
 

@@ -1,3 +1,10 @@
+/**
+ *@since 15/10/2017
+ *@file contaPoupanca.cpp
+ *@brief arquivo onde contém as implementações da classe ContaPoupanca.
+ *@author Matheus de Jesus Leandro de Medeiros
+ *@date 23/10/2017
+ */
 #include "contaPoupanca.h"
 
 ContaPoupanca::ContaPoupanca() {}
@@ -9,7 +16,7 @@ ContaPoupanca::ContaPoupanca(std::string _agencia,std::string _numero_conta,std:
 
 ContaPoupanca::~ContaPoupanca() {}
 
-/*=====Setters=====*/
+/*=====Setter=====*/
 
 void ContaPoupanca::setTodosLimitesCPD(int &LA)
 {
@@ -17,6 +24,8 @@ void ContaPoupanca::setTodosLimitesCPD(int &LA)
 	this->limiteExtrato = LA;
 	this->limiteTransferenciaTitular = LA;
 }
+
+/*=====Método que diminui os limites...=====*/
 
 void ContaPoupanca::diminuiLimiteD(std::string &tipo)
 {
@@ -53,7 +62,11 @@ int ContaPoupanca::getLimiteTransferenciaTitular() const
 	return this->limiteTransferenciaTitular;
 }
 
+/*====="Implementação padrão...."=====*/
+
 float ContaPoupanca::getLimite() const { return 2.0;}
+
+/*=====Método que imprime os atributos da classe....=====*/
 
 std::ostream& ContaPoupanca::print(std::ostream &o) const
 {

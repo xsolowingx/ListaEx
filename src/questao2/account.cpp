@@ -3,7 +3,7 @@
  *@file account.cpp
  *@brief this file contain the implementation of the class Account.
  *@author Matheus de Jesus Leandro de Medeiros
- *@date 09/22/2017
+ *@date 10/23/2017
  */
 #include "account.h"
 #include <iostream>

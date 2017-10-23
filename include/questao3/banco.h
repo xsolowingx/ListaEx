@@ -1,3 +1,10 @@
+/**
+ *@since 15/10/2017
+ *@file banco.h
+ *@brief arquivo onde contém as definições das funções do banco.
+ *@author Matheus de Jesus Leandro de Medeiros
+ *@date 23/10/2017
+ */
 #ifndef _BANCO_H
 #define _BANCO_H
 

@@ -1,0 +1,116 @@
+\hypertarget{classConta}{}\section{Conta Class Reference}
+\label{classConta}\index{Conta@{Conta}}
+Inheritance diagram for Conta\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classConta}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classConta_a840bac7d94992024fc14e6c3f37ddf6f}\label{classConta_a840bac7d94992024fc14e6c3f37ddf6f}} 
+{\bfseries Conta} (std\+::string \+\_\+agencia, std\+::string \+\_\+numero\+\_\+conta, std\+::string \+\_\+senha, std\+::string \+\_\+titular, Tipo\+Conta \+\_\+tipo\+\_\+da\+\_\+conta)
+\item 
+\mbox{\Hypertarget{classConta_a36b7092e235e0383387b76dd6d44123f}\label{classConta_a36b7092e235e0383387b76dd6d44123f}} 
+void {\bfseries add\+Operacao} (std\+::shared\+\_\+ptr$<$ \hyperlink{classOperacao}{Operacao} $>$ \+\_\+operacao)
+\item 
+\mbox{\Hypertarget{classConta_a3c15dc4739795232f3bb38bd4ac3f4d9}\label{classConta_a3c15dc4739795232f3bb38bd4ac3f4d9}} 
+std\+::vector$<$ std\+::shared\+\_\+ptr$<$ \hyperlink{classOperacao}{Operacao} $>$ $>$\+::iterator {\bfseries operacoes\+B\+E\+G\+IN} ()
+\item 
+\mbox{\Hypertarget{classConta_a7383512795267f4cd4a2635595c99b12}\label{classConta_a7383512795267f4cd4a2635595c99b12}} 
+std\+::vector$<$ std\+::shared\+\_\+ptr$<$ \hyperlink{classOperacao}{Operacao} $>$ $>$\+::iterator {\bfseries operacoes\+E\+ND} ()
+\item 
+\mbox{\Hypertarget{classConta_a8415b0c8b9571add46e97e31bb9c41a8}\label{classConta_a8415b0c8b9571add46e97e31bb9c41a8}} 
+void {\bfseries set\+Saldo} (float \+\_\+saldo\+\_\+)
+\item 
+\mbox{\Hypertarget{classConta_a64ddf0f8d86ee74e3cf4e1c1c0d934c9}\label{classConta_a64ddf0f8d86ee74e3cf4e1c1c0d934c9}} 
+std\+::string {\bfseries get\+Agencia} () const
+\item 
+\mbox{\Hypertarget{classConta_a1ca2df26b51446e9083d01258abe926a}\label{classConta_a1ca2df26b51446e9083d01258abe926a}} 
+std\+::string {\bfseries get\+Numero\+Conta} () const
+\item 
+\mbox{\Hypertarget{classConta_aace6d48702efd2d146db2e97ba1efba1}\label{classConta_aace6d48702efd2d146db2e97ba1efba1}} 
+std\+::string {\bfseries get\+Senha} () const
+\item 
+\mbox{\Hypertarget{classConta_a59b243246c7b36d84c5d02837df72796}\label{classConta_a59b243246c7b36d84c5d02837df72796}} 
+std\+::string {\bfseries get\+Titular} () const
+\item 
+\mbox{\Hypertarget{classConta_a7d56060e2dcd67d39f87f1b2d51b0742}\label{classConta_a7d56060e2dcd67d39f87f1b2d51b0742}} 
+std\+::string {\bfseries get\+TipoC} () const
+\item 
+\mbox{\Hypertarget{classConta_ade48c55499f84c6c1b261e0c164745e8}\label{classConta_ade48c55499f84c6c1b261e0c164745e8}} 
+float {\bfseries get\+Saldo} () const
+\item 
+\mbox{\Hypertarget{classConta_af2f3d065674824fe8a83c6eccfc99708}\label{classConta_af2f3d065674824fe8a83c6eccfc99708}} 
+Tipo\+Conta {\bfseries get\+Tipo\+Conta} () const
+\item 
+\mbox{\Hypertarget{classConta_a0f9001a717e7f71230a388e726736946}\label{classConta_a0f9001a717e7f71230a388e726736946}} 
+void {\bfseries set\+Todos\+Limites\+CP} (int \&LA)
+\item 
+\mbox{\Hypertarget{classConta_ad48404065aa4c6328bb911e36ddd6a11}\label{classConta_ad48404065aa4c6328bb911e36ddd6a11}} 
+void {\bfseries diminui\+Limite} (std\+::string \&tipo)
+\item 
+\mbox{\Hypertarget{classConta_a3775ce16c33f3ddcb028029c58670231}\label{classConta_a3775ce16c33f3ddcb028029c58670231}} 
+virtual float {\bfseries get\+Limite} () const =0
+\item 
+\mbox{\Hypertarget{classConta_a2bfc21ffd79608809d4f1cc3548619b4}\label{classConta_a2bfc21ffd79608809d4f1cc3548619b4}} 
+virtual int {\bfseries get\+Limite\+Saque} () const =0
+\item 
+\mbox{\Hypertarget{classConta_ae01ea7c06a5e7ffaee8a869a8a358044}\label{classConta_ae01ea7c06a5e7ffaee8a869a8a358044}} 
+virtual int {\bfseries get\+Limite\+Extrato} () const =0
+\item 
+\mbox{\Hypertarget{classConta_afb2847a62f226546b8f21087ef2e5e11}\label{classConta_afb2847a62f226546b8f21087ef2e5e11}} 
+virtual int {\bfseries get\+Limite\+Transferencia\+Titular} () const =0
+\item 
+\mbox{\Hypertarget{classConta_a9e465ff288631a7652321d35a197e3e5}\label{classConta_a9e465ff288631a7652321d35a197e3e5}} 
+bool {\bfseries operator==} (\hyperlink{classConta}{Conta} \&c) const
+\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classConta_abf3c5cda8fa7689e60a2e803e20f1b9c}\label{classConta_abf3c5cda8fa7689e60a2e803e20f1b9c}} 
+static int {\bfseries get\+Total\+Contas} ()
+\end{DoxyCompactItemize}
+\subsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classConta_aebf38c8207570f4e4a01661e2850c2c5}\label{classConta_aebf38c8207570f4e4a01661e2850c2c5}} 
+static int {\bfseries total\+Contas} = 0
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classConta_a0e0e322eae287419ad9a6a240a1a6da7}\label{classConta_a0e0e322eae287419ad9a6a240a1a6da7}} 
+std\+::string {\bfseries agencia}
+\item 
+\mbox{\Hypertarget{classConta_aac9f75d95a6dceb3d187ffa5bc57f199}\label{classConta_aac9f75d95a6dceb3d187ffa5bc57f199}} 
+std\+::string {\bfseries numero\+\_\+conta}
+\item 
+\mbox{\Hypertarget{classConta_ab121ceb2a3148f85dfc70835482a00eb}\label{classConta_ab121ceb2a3148f85dfc70835482a00eb}} 
+std\+::string {\bfseries senha}
+\item 
+\mbox{\Hypertarget{classConta_adf5a21c3c3e8bcd7e2eddfa45b8309e8}\label{classConta_adf5a21c3c3e8bcd7e2eddfa45b8309e8}} 
+std\+::string {\bfseries titular}
+\item 
+\mbox{\Hypertarget{classConta_a64e730e4e21e877cdf0f15b9120c31cb}\label{classConta_a64e730e4e21e877cdf0f15b9120c31cb}} 
+std\+::vector$<$ std\+::shared\+\_\+ptr$<$ \hyperlink{classOperacao}{Operacao} $>$ $>$ {\bfseries operacoes}
+\item 
+\mbox{\Hypertarget{classConta_afd9e6b0e5caca532e4d1ee39cf788d5b}\label{classConta_afd9e6b0e5caca532e4d1ee39cf788d5b}} 
+Tipo\+Conta {\bfseries tipo\+\_\+da\+\_\+conta}
+\item 
+\mbox{\Hypertarget{classConta_a0eedc43379194352bb6d117e2d58b9ad}\label{classConta_a0eedc43379194352bb6d117e2d58b9ad}} 
+float {\bfseries saldo}
+\end{DoxyCompactItemize}
+\subsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classConta_a476b15f634990aaa823054868f60b976}\label{classConta_a476b15f634990aaa823054868f60b976}} 
+std\+::ostream \& {\bfseries operator$<$$<$} (std\+::ostream \&o, \hyperlink{classConta}{Conta} const \&c)
+\end{DoxyCompactItemize}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/xsolowingx/\+L\+P1/\+Programas/\+Lista\+Ex/include/questao3/\hyperlink{conta_8h}{conta.\+h}\item 
+/home/xsolowingx/\+L\+P1/\+Programas/\+Lista\+Ex/src/questao3/\hyperlink{conta_8cpp}{conta.\+cpp}\end{DoxyCompactItemize}

@@ -1,3 +1,10 @@
+/**
+ *@since 15/10/2017
+ *@file contaPoupanca.h
+ *@brief arquivo onde contém as definições da classe ContaPoupanca.
+ *@author Matheus de Jesus Leandro de Medeiros
+ *@date 23/10/2017
+ */
 #ifndef _CONTAPOUPANCA_H
 #define _CONTAPOUPANCA_H
 

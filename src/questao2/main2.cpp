@@ -4,7 +4,7 @@
  *@brief this file contain the main program.
  *@author Matheus de Jesus Leandro de Medeiros
  *@sa bank.cpp for the implementation of each function.
- *@date 09/22/2017
+ *@date 10/23/2017
  */
 #include "account.h"
 #include "operation.h"

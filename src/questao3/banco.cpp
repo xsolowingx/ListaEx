@@ -1,3 +1,10 @@
+/**
+ *@since 15/10/2017
+ *@file banco.cpp
+ *@brief arquivo onde contém as implementações das funções do banco.
+ *@author Matheus de Jesus Leandro de Medeiros
+ *@date 23/10/2017
+ */
 #include "banco.h"
 #include "contaCorrente.h"
 #include "contaPoupanca.h"
@@ -460,8 +467,6 @@ void extratoBancario(std::vector<std::shared_ptr<Conta>> &contas)
 		}
 	}
 }
-
-/*===== =====*/
 
 /*=====Funções que fazem verificações=====*/
 

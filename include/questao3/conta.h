@@ -3,7 +3,7 @@
  *@file conta.h
  *@brief esse arquivo contém as definições da classe Conta.
  *@author Matheus de Jesus Leandro de Medeiros
- *@date 15/10/2017
+ *@date 23/10/2017
  */
 #ifndef _CONTA_H
 #define _CONTA_H

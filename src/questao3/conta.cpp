@@ -1,3 +1,10 @@
+/**
+ *@since 15/10/2017
+ *@file conta.cpp
+ *@brief arquivo onde contém as implementações da classe Conta.
+ *@author Matheus de Jesus Leandro de Medeiros
+ *@date 23/10/2017
+ */
 #include "conta.h"
 #include <iostream>
 

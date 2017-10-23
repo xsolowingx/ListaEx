@@ -790,7 +790,7 @@ WARN_LOGFILE           =
 # spaces. See also FILE_PATTERNS and EXTENSION_MAPPING
 # Note: If this tag is empty the current directory is searched.
 
-INPUT                  = ../include/questao1/bebida.h ../include/questao1/fruta.h ../include/questao1/roupa.h ../include/questao1/produto.h ../include/questao2/account.h ../include/questao2/operation.h ../include/questao2/bank.h ../src/questao1/bebida.cpp ../src/questao1/produto.cpp ../src/questao1/fruta.cpp ../src/questao1/roupa.cpp ../src/questao1/main1.cpp ../src/questao2/account.cpp ../src/questao2/operation.cpp ../src/questao2/bank.cpp ../src/questao2/main2.cpp
+INPUT                  = ../include/questao1/bebida.h ../include/questao1/fruta.h ../include/questao1/roupa.h ../include/questao1/produto.h ../include/questao2/account.h ../include/questao2/operation.h ../include/questao2/bank.h ../include/questao3/conta.h ../include/questao3/operacao.h ../include/questao3/contaCorrente.h ../include/questao3/contaPoupanca.h ../include/questao3/banco.h ../src/questao1/bebida.cpp ../src/questao1/produto.cpp ../src/questao1/fruta.cpp ../src/questao1/roupa.cpp ../src/questao1/main1.cpp ../src/questao2/account.cpp ../src/questao2/operation.cpp ../src/questao2/bank.cpp ../src/questao2/main2.cpp ../src/questao3/conta.cpp ../src/questao3/contaCorrente.cpp ../src/questao3/contaPoupanca.cpp ../src/questao3/operacao.cpp ../src/questao3/banco.cpp ../src/questao3/main3.cpp
 
 # This tag can be used to specify the character encoding of the source files
 # that doxygen parses. Internally doxygen uses the UTF-8 encoding. Doxygen uses

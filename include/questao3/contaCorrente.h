@@ -1,3 +1,10 @@
+/**
+ *@since 15/10/2017
+ *@file contaCorrente.h
+ *@brief arquivo onde contém as definições da classe ContaCorrente.
+ *@author Matheus de Jesus Leandro de Medeiros
+ *@date 23/10/2017
+ */
 #ifndef _CONTACORRENTE_H
 #define _CONTACORRENTE_H
 

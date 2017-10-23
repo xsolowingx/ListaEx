@@ -1,3 +1,10 @@
+/**
+ *@since 15/10/2017
+ *@file main3.cpp
+ *@brief arquivo principal do programa.
+ *@author Matheus de Jesus Leandro de Medeiros
+ *@date 23/10/2017
+ */
 #include <iostream>
 #include <memory>
 #include <sstream>
