@@ -6,7 +6,6 @@
 class ContaCorrente : public Conta
 {
 private:
-	TipoConta tipo_da_conta;
 	float limite;
 public:
 	ContaCorrente();
@@ -15,17 +14,16 @@ public:
 	~ContaCorrente();
 	
 	/*=====Getters=====*/
-	TipoConta getTipoConta() const;
 	float getLimite() const ;
 
-	int getLimiteSaque() const = 0;
-	int getLimiteExtrato() const = 0;
-	int getLimiteTransferenciaTitular() const = 0;
-	void setTodosLimitesCP(int LA) const = 0;
-	void diminuiLimite(std::string tipo) const = 0;
+	int getLimiteSaque() const;//
+	int getLimiteExtrato() const;//
+	int getLimiteTransferenciaTitular() const;//
 	
 private:
 	std::ostream& print(std::ostream &o) const;
+	void setTodosLimitesCPD(int &LA);//
+	void diminuiLimiteD(std::string &tipo);//
 	
 };
 

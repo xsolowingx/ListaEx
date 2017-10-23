@@ -1,4 +1,6 @@
 #include "banco.h"
+#include "contaCorrente.h"
+#include "contaPoupanca.h"
 #include <cstdlib>
 #include <iostream>
 #include <sstream>
@@ -84,11 +86,13 @@ void criarConta(std::vector<std::shared_ptr<Conta>> &contas)
 	if(Tipo_Conta == Poupanca)
 	{
 		contas.push_back(std::make_shared<ContaPoupanca>(_agencia_,_numero_conta_,_SENHA_,_titular_,Tipo_Conta) );
+		std::cout << "Conta Criada com Sucesso!" << std::endl;
 	}
 
 	if(Tipo_Conta != Poupanca)
 	{
 		contas.push_back(std::make_shared<ContaCorrente>(_agencia_,_numero_conta_,_SENHA_,_titular_,Tipo_Conta) );
+		std::cout << "Conta Criada com Sucesso!" << std::endl;
 	}
 }
 
@@ -120,10 +124,13 @@ void deposito(std::vector<std::shared_ptr<Conta>> &contas)
 			std::string _valor_;
 			inputNumberF(_valor_);
 
-			float valor_float = stof(_valor_);
+			std::stringstream ssf(_valor_);
+			float  valor_float;
+
+			ssf >> valor_float; 
 
 			if( ( (**it).getTipoConta() == Poupanca ) && (valor_float > 100.00) )
-			{
+			{	
 				int aux = (int) valor_float / 100;
 				(**it).setTodosLimitesCP( aux );
 			}
@@ -194,13 +201,16 @@ void saque(std::vector<std::shared_ptr<Conta>> &contas)
 				{	
 					if( ( (**it).getTipoConta() == Poupanca) && ( (**it).getLimiteSaque() == 0 )  )
 					{
-						std::cout << "Sua conta Poupanca chegou ao limite de saques";
+						std::cout << "Erro!" << std::endl;
+						std::cout << "Sua conta Poupanca chegou ao limite de saques" << std::endl;
+						std::cout << "Por favor faça depositos acima de R$100.00" << std::endl;
 						return;
 					}
 
 					if( (**it).getTipoConta() == Poupanca)
 					{
-						(**it).diminuiLimite("Saque");
+						std::string auxS = "Saque";
+						(**it).diminuiLimite(auxS);
 					}
 
 					float novo_saldo = (**it).getSaldo() - valor_float;
@@ -273,7 +283,7 @@ void listarContas(std::vector<std::shared_ptr<Conta>> &contas)
 
 	for(auto it = contas.begin() ; it != contas.end() ; it++)
 	{	
-		std::cout << "Conta " << i++ << ":" << std::endl;
+		std::cout << "Conta " << i++ << ":" << std::endl << std::endl;
 		std::cout << (**it);
 	}
 }
@@ -315,6 +325,7 @@ void transferencia(std::vector<std::shared_ptr<Conta>> &contas)
 				{	
 					if( ( (**it).getTipoConta() == Poupanca)  && ( (**it).getTitular() != (**iterator).getTitular() ) )
 					{
+						std::cout << "Erro!" << std::endl;
 						std::cout << "Contas poupancas so podem fazer transferencias para as contas correntes dos proprios titulares" << std::endl;
 						std::cout << "Operacao finalizada!" << std::endl;
 						return;
@@ -329,7 +340,8 @@ void transferencia(std::vector<std::shared_ptr<Conta>> &contas)
 
 					if( (**it).getTipoConta() == Poupanca)
 					{
-						(**it).diminuiLimite("Transferencia");
+						std::string auxT = "Transferencia";
+						(**it).diminuiLimite(auxT);
 					}
 					
 					std::cout << "Conta encontrada!" << std::endl;
@@ -432,7 +444,8 @@ void extratoBancario(std::vector<std::shared_ptr<Conta>> &contas)
 
 			if( (**it).getTipoConta() == Poupanca)
 			{
-				(**it).diminuiLimite("Extrato");
+				std::string auxE = "Extrato";
+				(**it).diminuiLimite(auxE);
 			}
 
 			std::cout << "Sua conta tem:" << std::endl;

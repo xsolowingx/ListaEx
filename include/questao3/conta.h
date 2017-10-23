@@ -56,20 +56,22 @@ public:
 	std::string getTitular() const;
 	std::string getTipoC() const;
 	float getSaldo() const;
-	virtual TipoConta getTipoConta() const = 0;
+	TipoConta getTipoConta() const;
+	void setTodosLimitesCP(int &LA);
+	void diminuiLimite(std::string &tipo);
 	virtual float getLimite() const = 0;
 	
 	virtual int getLimiteSaque() const = 0;
 	virtual int getLimiteExtrato() const = 0;
 	virtual int getLimiteTransferenciaTitular() const = 0;
-	virtual void setTodosLimitesCP(int LA) const = 0;
-	virtual void diminuiLimite(std::string tipo) const = 0;
 
 	friend std::ostream& operator<< (std::ostream &o,Conta const &c);
 	bool operator==(Conta &c) const;
 
 private:
 	virtual std::ostream& print(std::ostream& o) const = 0;
+	virtual void setTodosLimitesCPD(int &LA) = 0;
+	virtual void diminuiLimiteD(std::string &tipo) = 0;
 };
 
 #endif

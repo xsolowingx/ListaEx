@@ -2,8 +2,6 @@
 #define _BANCO_H
 
 #include "conta.h"
-#include "contaCorrente.h"
-#include "contaPoupanca.h"
 
 void criarConta(std::vector<std::shared_ptr<Conta>> &contas);
 

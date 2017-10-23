@@ -1,4 +1,5 @@
 #include "conta.h"
+#include <iostream>
 
 int Conta::totalContas= 0;
 
@@ -56,6 +57,11 @@ std::string Conta::getNumeroConta() const
 	return this->numero_conta;
 }
 
+TipoConta Conta::getTipoConta() const
+{
+	return this->tipo_da_conta;
+}
+
 std::string Conta::getSenha() const
 {
 	return this->senha;
@@ -87,4 +93,14 @@ bool Conta::operator==(Conta &c) const
 
 	else
 		return false;
+}
+
+void Conta::setTodosLimitesCP(int &LA)
+{
+	return setTodosLimitesCPD(LA);
+}
+
+void Conta::diminuiLimite(std::string &tipo)
+{
+	return diminuiLimiteD(tipo); 
 }

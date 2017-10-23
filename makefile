@@ -8,7 +8,7 @@
 RM = rm -rf
 #variáveis de compilação.
 CC = g++
-CFLAGS = -W -Wall -pedantic -ansi -O0 -g -std=c++11 -I. -I$(INC_DIR)/questao1 -I$(INC_DIR)/questao2 -I$(INC_DIR)/questao3
+CFLAGS = -W -Wall -pedantic -ansi -std=c++11 -I. -I$(INC_DIR)/questao1 -I$(INC_DIR)/questao2 -I$(INC_DIR)/questao3
 #variáveis de diretórios.
 INC_DIR = ./include
 BIN_DIR = ./bin
@@ -30,6 +30,7 @@ $(OBJ_DIR)/questao3/contaPoupanca.o $(OBJ_DIR)/questao3/main3.o
 #Garante que os alvos desta lista nao sejam confundidos com arquivos de mesmo nome
 .PHONY: all clean distclean doxy
 
+questao32: questao3
 
 all:	questao1 questao2 questao3
 
